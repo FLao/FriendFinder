@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-
+/*
 // Friends List (DATA)
 // =============================================================
 var friends = [{
@@ -49,7 +49,7 @@ app.get("/survey", function(request, response) {
 
 // Display all friends - provides JSON
 app.get("/api/friends", function(request, response) {
-    response.json(friends);
+  response.json(friends);
 });
 
 // Create new friend - takes in JSON input
@@ -104,6 +104,10 @@ function getScore(a, b){
 
   return total;
 }
+*/
+
+require("./app/routing/html-routes")(app);
+require("./app/routing/api-routes")(app);
 
 // Starts the server to begin listening
 // =============================================================
