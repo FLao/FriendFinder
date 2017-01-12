@@ -32,11 +32,11 @@ module.exports=(app)=>{
         friends.push(newFriend);
     });
 
-    function setStringsToNumbers(strings){
+    function setStringsToNumbers(strArray){
         var numbers = [];
         
         for(var i = 0; i < 10; i++)
-            numbers[i] = parseInt(strings[i]);
+            numbers[i] = parseInt(strArray[i]);
         
         return numbers;
     }
